@@ -4,8 +4,6 @@
 This repository contains an **Excel-based analytics dashboard** I rebuilt and extended using a public dataset and a tutorial as a starting point. My goal was to turn a one-off tutorial file into a **documented, reproducible, and improvable project** that reflects my own workflow and decisions.
 
 > **Important attribution:** This project was inspired by a YouTube tutorial. Full credit to the original author for the initial concept and dataset link. I rebuilt the workbook from scratch, made several design and analytical changes, and documented every step below to clearly separate my work from the tutorial.
-> - Tutorial: _add the YouTube link here_
-> - Dataset source (within the workbook): `BlinkIT Grocery Data` sheet
 
 ---
 
@@ -75,7 +73,7 @@ Consider adding later:
   - Sales vs `Visibility Bins` (to explore shelf‑visibility effect).
 - Added calculated fields inside pivots (where appropriate) for ratios and contributions.
 
-### 4) Design the dashboard (`DashBoard` sheet)
+### 4) Design the dashboard (`Dashboard` sheet)
 - **Layout:** Header with KPIs → filters → main visual grid.
 - **KPIs:** Total Sales, Avg Sales, Avg Rating, Unique Items, Unique Outlets, Outlet Age (median).
 - **Visuals:** Clustered bar for Item Type sales, stacked bar for Outlet Type × Location, donut for Fat Content mix, line for sales by Establishment Year, heat/conditional format for Sales vs Rating.
@@ -92,64 +90,18 @@ Consider adding later:
 
 ## 🆚 How This Differs From the Tutorial
 
-I didn’t just upload the tutorial file — I **rebuilt and extended** it. The main differences:
+## 💡 My Key Contributions
 
-1. **Reproducible documentation** — This README and in‑sheet notes describe every step and decision.
-2. **Data quality improvements** — Category standardization and explicit imputation strategy for `Item Weight`.
-3. **Additional metrics** — `Sales per Kg`, `Outlet Age`, and `Visibility Bins` + related analyses.
-4. **Dashboard design tweaks** — Cleaner typographic hierarchy, consistent color usage, minimalist cards, improved number formatting.
-5. **QA procedures** — Cross‑checks to ensure pivot totals align with KPI cards and slices.
-6. **Open‑source hygiene** — Version control, clear attribution, and change log (see `/docs/change_log.md`).
-
-> Feel free to compare the original tutorial to this repo; the commit history reflects my rebuild and enhancements.
-
----
-
-## 🚀 How to Run
-
-1. Download `Blinkit Analysis Dashboard (Excel).xlsx`.
-2. Open in Excel (Microsoft 365 or Excel 2019+ recommended).
-3. Enable editing if prompted.
-4. Use the slicers on the `DashBoard` sheet to filter by item/outlet/location attributes.
-5. If you see `#N/A` or blanks in pivots, click **Refresh All** (Data → Refresh All).
-
-_No external plugins are required._
-
----
-
-## 🧪 Reproducing My Transformations
-
-If you prefer to re‑create from scratch:
-
-1. **Import data** into a clean sheet from CSV/XLSX.
-2. Standardize categories:
-   - `Item Fat Content`: map (`LF`, `low fat`, `Low Fat`) → `Low Fat`; (`reg`, `Regular`) → `Regular`.
-3. **Impute `Item Weight`**:
-   - Create a helper table: median weight by `Item Type`.
-   - Use `XLOOKUP` to fill blanks from the helper table.
-4. Create calculated columns:
-   - `Outlet Age` = `YEAR(TODAY()) - [Outlet Establishment Year]`.
-   - `Sales per Kg` = `[Total Sales] / [Item Weight]`.
-   - `Visibility Bins` via `IFS`/`VLOOKUP` against a bin table.
-5. Build PivotTables and visuals as described in **Design the dashboard**.
-6. Wire up slicers and refresh all.
-
----
-
-## 📈 Possible Next Steps (Roadmap)
-
-- Add a **scenario panel** (e.g., simulate +5% visibility → estimated sales change).
-- Introduce **Power Query** to do transformations reproducibly (instead of manual steps).
-- Move KPIs to **Power Pivot** with measures (CALCULATE, DIVIDE, etc.) for more control.
-- Export a **PDF snapshot** on refresh (Office Script or macro).
-- Publish a **walkthrough post** with GIFs/screenshots.
+- Rebuilt the entire dashboard manually from a blank Excel workbook.
+- Standardized messy data categories (like Item Fat Content and Outlet Size).
+- Created new KPIs: **Sales per Kg**, **Outlet Age**, and **Visibility Bins**.
+- Added slicers and consistent formatting for cleaner visuals.
+- Wrote detailed documentation (this README and a changelog).
+- Performed QA checks to ensure correct pivot totals and clean interactivity.
 
 ---
 
 ## 🤝 Attribution
-
-- Tutorial by: _add creator name & link_
-- Data: embedded within workbook; if there’s an original source, cite it here.
 
 I respect content creators. This repo exists to demonstrate my **own workflow** and the **ability to extend** a tutorial into production‑style, documented work.
 
@@ -158,9 +110,3 @@ I respect content creators. This repo exists to demonstrate my **own workflow** 
 ## 📜 License
 
 Use any OSI-approved license that fits your goals. If unsure, MIT is a safe default for showcasing.
-
----
-
-## 💡 Contact
-
-Questions or suggestions? Open an issue or reach out via LinkedIn / email.
