@@ -32,13 +32,14 @@ My goal was to turn a one-off tutorial file into a **documented, reproducible, a
 
 ## 🧱 Repository Structure
 
+```
 .
 ├── Blinkit Analysis Dashboard (Excel).xlsx   # Main Excel file
 ├── README.md                                 # This file
 └── /docs
     └── change_log.md                         # What I changed vs tutorial
     
----
+```
 
 ## ✅ What I Did (End-to-End)
 
