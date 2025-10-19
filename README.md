@@ -60,7 +60,7 @@ Consider adding later:
 - **Missing values**
   - `Item Weight`: imputed via **median by Item Type** (more robust than global mean).
 - **Derived fields**
-  - `Outlet Age` = `CurrentYear` − `Outlet Establishment Year` (document the `CurrentYear` used; I use 2025 for reproducibility).
+  - `Outlet Age` = `2024` − `Outlet Establishment Year` (document the `CurrentYear` used; I use 2025 for reproducibility).
   - `Sales per Kg` = `Total Sales` / `Item Weight` (post‑imputation).
   - `Visibility Bins` = bins of `Item Visibility` for segment analysis.
 
