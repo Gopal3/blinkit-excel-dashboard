@@ -28,17 +28,16 @@ My goal was to turn a one-off tutorial file into a **documented, reproducible, a
 
 > Exact numbers will recompute from the workbook; these are provided for reference.
 
-```md
 ---
 
 ## 🧱 Repository Structure
 
-```
 .
 ├── Blinkit Analysis Dashboard (Excel).xlsx   # Main Excel file
 ├── README.md                                 # This file
 └── /docs
     └── change_log.md                         # What I changed vs tutorial
+    
 ---
 
 ## ✅ What I Did (End-to-End)
