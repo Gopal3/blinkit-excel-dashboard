@@ -28,6 +28,7 @@ My goal was to turn a one-off tutorial file into a **documented, reproducible, a
 
 > Exact numbers will recompute from the workbook; these are provided for reference.
 
+```md
 ---
 
 ## 🧱 Repository Structure
