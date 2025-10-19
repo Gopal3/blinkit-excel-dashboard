@@ -90,7 +90,7 @@ Consider adding later:
 
 ## 🆚 How This Differs From the Tutorial
 
-## 💡 My Key Contributions
+💡 My Key Contributions
 
 - Rebuilt the entire dashboard manually from a blank Excel workbook.
 - Standardized messy data categories (like Item Fat Content and Outlet Size).
